@@ -1,0 +1,401 @@
+/*
+
+File Name: style.less
+Date: 09/15/22
+Programmer: Mara Peasley
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+
+/* MOBILE STYLESHEET */
+
+header {
+    ul {
+        display: inline-block;
+        padding-bottom: .25em;
+    }
+
+    li {
+        float: left;
+        display: block;
+        text-align: center;
+        padding-left: 1em;
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+
+    h1 {
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+        padding: .5em 0em .5em 0em;
+        line-height: 1.5em;
+    }
+
+    p {
+        float: right;
+        padding-right: 1em;
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+}
+
+main {
+    section:first-child {
+        background-color: @greyColor4;
+        img {
+            width: 67%;
+        }
+        img#heropolaroid {
+            position: relative;
+            left: -10px;
+            transform: rotate(-9deg);
+        }
+        div {
+            position: absolute;
+            //top: 55%;
+            top: 280px;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            background-color: @greyColor1;
+            padding: .5em;
+            img {
+                width: 100%;
+            }
+            h2 {
+                font-size: .75em;
+            }
+            p {
+                font-size: .5em;
+            }
+        }
+    }
+
+    section.polaroidright {
+        margin-bottom: -200px;
+        clear: both;
+        overflow: hidden;
+        img {
+            width: 80%;
+            margin: 1em;
+            position: relative;
+            right: -65px;
+        }
+        h3 {
+            padding: 2.25em 0 0 1em;
+            font-size: 1em;
+        }
+        p {
+            font-size: .75em;
+            padding: 1.75em 0 0 1em;
+        }
+    }
+    img.backpolaroid {
+        transform: rotate(8deg);
+        right: 0;
+        left: 0;
+        top: 20px
+    }
+    img.frontpolaroid {
+        transform: rotate(-9deg);
+        top: -215px;
+    }
+
+    section.imgleft {
+        padding: 0 0 1em 0;
+        clear: both;
+        img {
+            width: 50%;
+            float: right;
+            margin: .75em 0 0 .5em;
+        }
+        h3 {
+            padding: 2.25em 0 0 1em;
+            font-size: 1em;
+        }
+        p {
+            font-size: .75em;
+            padding: 1.75em 0 0 1em;
+        }
+    }
+
+    /*
+        Need to make the Case Study Boxes in code
+        This mainly includes the hover effect box rather than the main img
+
+        After that we need to make the final client section
+        As well as the footer
+
+        Then moving onto the case study page, Yay!
+        */
+    div#casestudyfirstrow {
+        img:first-child {
+            padding-top: 2.5em;
+        }
+    }
+    div#casestudysecondrow {
+        img:nth-child(3) {
+            padding-bottom: 2.5em;
+        }
+    }
+    
+    div#casestudyfirstrow, div#casestudysecondrow {
+        background-color: @greyColor4;
+        img {
+            padding: 1em 2em 1em 2em;
+        }
+    }
+
+    /*.image-container {
+        cursor: pointer;
+      }
+      
+      .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease;
+      }
+      
+      .image-container.active .behindimage {
+        opacity: 0;
+      }
+      
+      .image-container.active .frontimage {
+        opacity: 1;
+      }*/
+      
+
+    /*
+    <div class="plant">
+        <div class="plant-content">
+            <h2>Awesome Project</h2>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+        <div class="plant-visual">
+            <img src="images/case_study_oval.svg" alt=" ">
+        </div>
+    </div>
+    */
+    .casestudy {
+        background-color: @greyColor3;
+        width: 80%;
+        height: 390px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .study-content {
+        width: 100%;
+        opacity: 1;
+    }
+    .study-visual {
+        position: absolute;
+        top: -68px;
+        left: 28px;
+        transition: width 300ms ease;
+        display: block;
+    }
+    .study-content {
+        position: absolute;
+        opacity: 0;
+        transition: width 100ms ease;
+    }
+    .casestudy:hover .study-content {
+        opacity: 1;
+    }
+    .casestudy:hover .study-visual {
+        opacity: 0;
+        transform: scale(.5);
+        transform-origin: center center;
+    }
+    button {
+        display: block;
+        margin: 4em auto 0 auto;
+        width: 60%;
+        height: 35px;
+    }
+    #casestudysecondrow {
+        padding-bottom: 2em;
+        button {
+            margin-top: 7em;
+        }
+    }
+
+
+    
+    .col {
+        //float: none;
+    }
+
+    section.needcreative {
+        h4 {
+            text-align: center;
+            padding: 1em;
+            font-size: 1.5em;
+            line-height: 1.35em;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            width: 60%;
+            height: 35px;
+        }
+        p {
+            width: 85%;
+            margin: 1em auto 0 auto;
+            padding: 1em;
+        }
+    }
+
+}   
+
+footer {
+    ul {
+        border-top: solid 4px @greyColor3;
+        margin: 4em 1em 0 1em;
+        text-align: center;
+        padding-top: 1.25em;
+        li {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 0 1em 1em 1em;
+        }
+    }
+   #copy {
+    font-size: .75em;
+    text-align: center;
+    background-color: @greyColor3;
+    color: @greyColor6;
+    padding: .5em 0;
+   }
+}
+
+.desktop {
+    display: none;
+}
+.mobile {
+    display: block;
+}
+
+body {
+    //sets default font for the page
+    font-family: "Playfair Display", serif;
+    //sets default size for all font at 1em
+    font-size: 18px;
+    line-height: 1.5em;
+    background-color: @greyColor1;
+    color: @darkColor;
+}
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+
+    main {
+        section:first-child {
+            img {
+                width: 52%;
+                padding: 1em;
+            }
+            div {
+                //top: 55%;
+                top: 435px;
+                left: 68%;
+                padding: 1.5em;
+            }
+        }
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+
+    header {
+        padding: .5em 2em 0 2em;
+        ul {
+            li {
+                padding-left: 3em;
+            }
+        }
+        p {
+            padding-right: 3em;
+        }
+    }
+
+    main {
+        img {
+            width: 100%;
+        }
+        section:first-child {
+            img {
+                width: 25%;
+            }
+            img#namescribble {
+                position: absolute;
+                top: -176px;
+                left: 30px;
+                scale: 2;
+                width: 90%;
+            }
+            img#heropolaroid {
+                top: -20px;
+                left: 300px;
+            }
+            img#underlinescribble {
+                position: absolute;
+                right: -30px;
+                top: 100px;
+                scale: 2;
+            }
+            div {
+                top: 456px;
+                left: 60%;
+                text-align: left;
+                width: 30%;
+                font-size: 1.5em;
+            }
+        }
+        section.imgleft {
+            img {
+                width: 20%;
+            }
+            div {
+                margin: 0 auto 0 15em;
+                width: 50%;
+            }
+        }
+    }
+
+    .desktop {
+        display: block;
+    }
+    .mobile {
+        display: none;
+    }
+
+    
+
+}
