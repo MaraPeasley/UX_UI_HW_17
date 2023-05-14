@@ -27,6 +27,7 @@ Source = https://color.adobe.com/create/image
 header ul {
   display: inline-block;
   padding-bottom: 0.25em;
+  font-size: 0.85em;
 }
 header li {
   float: left;
@@ -34,7 +35,7 @@ header li {
   text-align: center;
   padding-left: 1em;
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 header h1 {
   display: block;
@@ -47,9 +48,11 @@ header p {
   float: right;
   padding-right: 1em;
   text-transform: uppercase;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85em;
 }
 main {
+  background-color: #eeeeee;
   /*
         Need to make the Case Study Boxes in code
         This mainly includes the hover effect box rather than the main img
@@ -59,6 +62,18 @@ main {
 
         Then moving onto the case study page, Yay!
         */
+  /*div#casestudyfirstrow {
+        margin: auto;
+        width: 85%;
+        img:first-child {
+            padding-top: 2.5em;
+        }
+    }
+    div#casestudysecondrow {
+        img:nth-child(3) {
+            padding-bottom: 2.5em;
+        }
+    }*/
   /*.image-container {
         cursor: pointer;
       }
@@ -92,8 +107,20 @@ main {
     </div>
     */
 }
+main button {
+  display: block;
+  margin: 2em auto 8em auto;
+  width: 60%;
+  height: 35px;
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+  background-color: #5a5a5a;
+  border: none;
+  cursor: pointer;
+}
 main section:first-child {
   background-color: #b9b9b9;
+  margin-bottom: -0.75em;
 }
 main section:first-child img {
   width: 67%;
@@ -123,8 +150,11 @@ main section:first-child div p {
 }
 main section.polaroidright {
   margin-bottom: -200px;
+  margin-top: -0.5em;
   clear: both;
   overflow: hidden;
+  background-color: #5a5a5a;
+  color: #FFFFFF;
 }
 main section.polaroidright img {
   width: 80%;
@@ -167,12 +197,6 @@ main section.imgleft p {
   font-size: 0.75em;
   padding: 1.75em 0 0 1em;
 }
-main div#casestudyfirstrow img:first-child {
-  padding-top: 2.5em;
-}
-main div#casestudysecondrow img:nth-child(3) {
-  padding-bottom: 2.5em;
-}
 main div#casestudyfirstrow,
 main div#casestudysecondrow {
   background-color: #b9b9b9;
@@ -181,13 +205,17 @@ main div#casestudyfirstrow img,
 main div#casestudysecondrow img {
   padding: 1em 2em 1em 2em;
 }
+main #work {
+  background-color: #b9b9b9;
+  padding-top: 1px;
+  margin: 2em 0.5em 0 0.75em;
+}
 main .casestudy {
   background-color: #d7d7d7;
   width: 80%;
   height: 390px;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 4em auto 0 auto;
   display: block;
 }
 main .study-content {
@@ -195,36 +223,52 @@ main .study-content {
   opacity: 1;
 }
 main .study-visual {
-  position: absolute;
-  top: -68px;
-  left: 28px;
-  transition: width 300ms ease;
-  display: block;
+  margin: -2em auto;
+  text-align: center;
+}
+main .study-visual img {
+  margin-top: -2em;
 }
 main .study-content {
   position: absolute;
   opacity: 0;
   transition: width 100ms ease;
+  font-family: 'Inter', sans-serif;
+  padding: 1.5em;
+}
+main .study-content .casestudytitle {
+  font-size: 1.25em;
+  padding-top: 0em;
+  padding-bottom: 0.75em;
+  border-bottom: solid 2px #FFFFFF;
+}
+main .study-content .casestudytitle em {
+  font-size: 0.65em;
+}
+main .study-content p {
+  padding-top: 0.75em;
+  font-size: 0.85em;
+}
+main .study-content button {
+  border: none;
+  background-color: #5a5a5a;
+  color: #FFFFFF;
 }
 main .casestudy:hover .study-content {
   opacity: 1;
 }
 main .casestudy:hover .study-visual {
   opacity: 0;
-  transform: scale(0.5);
-  transform-origin: center center;
 }
-main button {
-  display: block;
-  margin: 4em auto 0 auto;
-  width: 60%;
-  height: 35px;
+main div#casestudyfirstrow {
+  padding-top: 1em;
 }
-main #casestudysecondrow {
-  padding-bottom: 2em;
+main div#casestudysecondrow {
+  padding-bottom: 1em;
 }
-main #casestudysecondrow button {
-  margin-top: 7em;
+main section.needcreative {
+  background-color: #eeeeee;
+  margin-top: -0.5em;
 }
 main section.needcreative h4 {
   text-align: center;
@@ -237,26 +281,35 @@ main section.needcreative button {
   margin: 0 auto;
   width: 60%;
   height: 35px;
+  border: none;
+  background-color: #5a5a5a;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
 }
 main section.needcreative p {
-  width: 85%;
+  font-size: 0.65em;
+  width: 75%;
   margin: 1em auto 0 auto;
   padding: 1em;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
 }
 footer ul {
   border-top: solid 4px #d7d7d7;
   margin: 4em 1em 0 1em;
   text-align: center;
   padding-top: 1.25em;
+  font-size: 0.85em;
 }
 footer ul li {
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   display: inline-block;
   padding: 0 1em 1em 1em;
 }
 footer #copy {
   font-size: 0.75em;
+  font-family: 'Inter', sans-serif;
   text-align: center;
   background-color: #d7d7d7;
   color: #5a5a5a;
@@ -268,11 +321,15 @@ footer #copy {
 .mobile {
   display: block;
 }
+a {
+  text-decoration: none;
+  color: #000000;
+}
 body {
   font-family: "Playfair Display", serif;
   font-size: 18px;
   line-height: 1.5em;
-  background-color: #f7f7f7;
+  background-color: #eeeeee;
   color: #000000;
 }
 /*
@@ -283,14 +340,62 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
 
 */
 @media only screen and (min-width: 481px) {
+  header ul {
+    padding-left: 3em;
+  }
+  header p {
+    padding-right: 3em;
+  }
+  main button {
+    width: 30%;
+  }
   main section:first-child img {
     width: 52%;
     padding: 1em;
   }
   main section:first-child div {
-    top: 435px;
+    top: 300px;
     left: 68%;
     padding: 1.5em;
+  }
+  main section.imgleft img {
+    width: 35%;
+  }
+  main .casestudy {
+    width: 55%;
+  }
+  main section.polaroidright img {
+    width: 35%;
+  }
+  main section.polaroidright h3 {
+    padding-left: 3em;
+    width: 50%;
+  }
+  main section.polaroidright p {
+    padding-left: 4em;
+    width: 50%;
+  }
+  main section.polaroidright .frontpolaroid {
+    right: -112px;
+  }
+  main section.polaroidright .backpolaroid {
+    left: 575px;
+    top: -140px;
+  }
+  main section.needcreative button {
+    width: 35%;
+  }
+  main section.needcreative p {
+    font-size: 0.65em;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    margin-top: 0;
+  }
+  footer ul {
+    margin: 4em 5em 0 5em;
+  }
+  footer .mobile {
+    display: inline-block;
   }
 }
 /*
@@ -301,14 +406,152 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
 
 */
 @media only screen and (min-width: 1025px) {
+  main section:first-child img {
+    width: 34%;
+  }
+  main section:first-child div {
+    top: 380px;
+  }
+  main section:first-child div img {
+    position: absolute;
+    top: -120px;
+  }
+  main section:first-child img#heropolaroid {
+    left: 170px;
+  }
+  main section.imgleft {
+    position: relative;
+  }
+  main section.imgleft img {
+    width: 45%;
+    position: absolute;
+    top: 115px;
+    right: -180px;
+    transform: rotate(5deg);
+    margin-top: -3.5em;
+  }
+  main section.imgleft h3 {
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    line-height: 1.5em;
+  }
+  main section.imgleft p {
+    font-size: 0.85em;
+  }
+  main section.imgleft div {
+    margin: 0 auto 0 10em;
+    width: 50%;
+  }
+  main section.polaroidright {
+    overflow: visible;
+    margin-bottom: -280px;
+  }
+  main section.polaroidright img {
+    width: 30%;
+  }
+  main section.polaroidright .backpolaroid {
+    top: -210px;
+    left: 670px;
+  }
+  main section.polaroidright .frontpolaroid {
+    top: -330px;
+    right: -212px;
+  }
+  main section.polaroidright div {
+    width: 75%;
+    margin: 0 auto 0 9em;
+  }
+  main section.polaroidright h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding-left: 1em;
+  }
+  main section.polaroidright p {
+    font-size: 0.85em;
+    padding-left: 2em;
+  }
+  main .section {
+    margin: 0;
+  }
+  main section#work {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+  main div#casestudysecondrow {
+    margin-bottom: 3em;
+  }
+  main section.needcreative h4 {
+    font-size: 2.5em;
+    padding-top: 2em;
+  }
+  main section.needcreative p {
+    margin-top: 1em;
+  }
+  footer {
+    background-color: #eeeeee;
+    border-top: solid 5px #d7d7d7;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  footer ul {
+    display: inline-block;
+    text-align: left;
+    border: none;
+    margin: 0;
+  }
+  footer ul li {
+    padding-left: 0;
+  }
+  footer ul .mobile {
+    display: none;
+  }
+  footer #copy {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    background-color: #eeeeee;
+    margin: 1em;
+  }
+  footer p {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    margin: 1.25em;
+  }
+  .desktop {
+    display: inline-block;
+  }
+  .mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1300px) {
   header {
     padding: 0.5em 2em 0 2em;
+  }
+  header ul {
+    font-size: 1em;
   }
   header ul li {
     padding-left: 3em;
   }
   header p {
+    font-size: 1em;
     padding-right: 3em;
+  }
+  main {
+    /*.study-visual {
+            //position: inherit;
+            //top: 0;
+            //left: 0;
+            //transition: none;
+            //margin: -5em auto 0 auto;
+            //text-align: center;
+            //width: 35%;
+        }*/
   }
   main img {
     width: 100%;
@@ -320,12 +563,12 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
     position: absolute;
     top: -176px;
     left: 30px;
-    scale: 2;
+    scale: 1.5;
     width: 90%;
   }
   main section:first-child img#heropolaroid {
     top: -20px;
-    left: 300px;
+    left: 380px;
   }
   main section:first-child img#underlinescribble {
     position: absolute;
@@ -340,15 +583,142 @@ The following CSS affects all screen sizes larger than 1024 pixels wide.
     width: 30%;
     font-size: 1.5em;
   }
+  main section.imgleft {
+    background-color: #eeeeee;
+  }
   main section.imgleft img {
-    width: 20%;
+    width: 32%;
+    position: absolute;
+    top: 0;
+    right: 74px;
+    transform: rotate(5deg);
+    margin-top: -3.5em;
+  }
+  main section.imgleft h3 {
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    line-height: 1.5em;
+  }
+  main section.imgleft p {
+    font-size: 0.85em;
   }
   main section.imgleft div {
     margin: 0 auto 0 15em;
-    width: 50%;
+    width: 43%;
+  }
+  main section.polaroidright {
+    overflow: visible;
+    margin-top: -1em;
+  }
+  main section.polaroidright img {
+    width: 20%;
+  }
+  main section.polaroidright div {
+    width: 75%;
+    margin: 0 auto 0 15em;
+  }
+  main section.polaroidright h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding-left: 1em;
+  }
+  main section.polaroidright p {
+    font-size: 0.85em;
+    padding-left: 2em;
+  }
+  main section.polaroidright .backpolaroid {
+    left: 1020px;
+    top: -280px;
+  }
+  main section.polaroidright .frontpolaroid {
+    left: 900px;
+    top: -175px;
+  }
+  main section#work {
+    background-color: #eeeeee;
+    padding-bottom: 4em;
+  }
+  main .casestudy {
+    width: 28%;
+    display: inline-block;
+    margin-bottom: 0em;
+    margin-left: 1em;
+    margin-right: 1em;
+    top: 0;
+  }
+  main .study-content button:hover {
+    background-color: #b9b9b9;
+    cursor: pointer;
+  }
+  main div#casestudyfirstrow,
+  main div#casestudysecondrow {
+    width: 85%;
+    margin: auto;
+    padding: 0 1.5em;
+    text-align: center;
+  }
+  main div#casestudyfirstrow img,
+  main div#casestudysecondrow img {
+    width: 65%;
+  }
+  main div#casestudyfirstrow .study-content,
+  main div#casestudysecondrow .study-content {
+    text-align: left;
+  }
+  main div#casestudysecondrow {
+    padding-bottom: 3em;
+  }
+  main section.needcreative {
+    margin-top: -1em;
+    margin-bottom: 3em;
+  }
+  main section.needcreative button {
+    width: 20%;
+    height: 45px;
+  }
+  main section.needcreative h4 {
+    font-size: 2.5em;
+    padding-top: 3em;
+  }
+  main section.needcreative p {
+    margin-top: 1em;
+  }
+  footer {
+    background-color: #eeeeee;
+    border-top: solid 5px #d7d7d7;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  footer ul {
+    display: inline-block;
+    text-align: left;
+    border: none;
+    margin: 0;
+  }
+  footer ul li {
+    padding-right: 2em;
+  }
+  footer ul .mobile {
+    display: none;
+  }
+  footer #copy {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    background-color: #eeeeee;
+    margin: 1em;
+  }
+  footer p {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    margin: 1.25em;
   }
   .desktop {
-    display: block;
+    display: inline-block;
   }
   .mobile {
     display: none;

@@ -16,6 +16,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Source+Sans+Pro:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     
 <!-- Below are the 4 stylesheets needed to run this website:
 - reset.css clears all formatting for all default css on the site
@@ -32,15 +36,14 @@
 
 <body>
     <!--  -->
-    <header>
-        <h1>Mara<br>Peasley</h1>
+    <header id="home">
+        <h1>Mara Peasley</h1>
 
         <ul>
-            <li>work</li>
-            <li>about</li>
+            <li><a href="#work">work</a></li>
         </ul>
         
-        <p>instagram</p>
+        <p><a href="https://www.instagram.com/hey.peas/" target="_blank">instagram</a></p>
     </header>
 
     <main>
@@ -66,7 +69,8 @@
             Again, figuring out how to overlay scribbles over graphic without creating a whole new graphic
         -->
         <section class="imgleft">
-            <img src="images/postcard_graphic_skew.svg" alt="postcard graphic">
+            <img class="mobile" src="images/postcard_graphic_skew.svg" alt="postcard graphic">
+            <img class="desktop" src="images/postcard_graphic.png" alt="postcard graphic">
 
             <div>
                 <h3>Some about me text. A few simple statements. I'm very cool.</h3>
@@ -92,8 +96,8 @@
 
             onmouseenter="this.src='images/case_study_description.svg'" onmouseleave="this.src='images/case_study_card_graphic.png' "
         -->
-
-        <div id="casestudyfirstrow" class="">
+        <section id="work">
+        <div id="casestudyfirstrow" class="section group">
             <!--
                 WOULD LOVE TO USE AT A LATER DATE 
             <div class="plant">
@@ -122,21 +126,7 @@
             BELOW ARE THE TWO ROWS OF THE 3 CARD CASE STUDIES
             -->
 
-            <div class="casestudy col span_4_of_12" style="top: 40px;">
-                <div class="study-content">
-                    <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
-                    <p>Case Study Description<br>
-                    Wow this is where the description would go and it would tell you all about the study without the graphic in the background. So good oh my goodness wow.</p>
-                    <button>full case</button>
-                </div>
-                <div class="study-visual">
-                    <img src="images/case_study_oval.svg">
-                    <button class="mobile">full case</button>
-                </div>
-            </div>
-            <button class="mobile">full case</button>
-
-            <div class="casestudy col span_4_of_12" style="top: 40px;">
+            <div class="casestudy">
                 <div class="study-content">
                     <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
                     <p>Case Study Description<br>
@@ -149,7 +139,20 @@
             </div>
             <button class="mobile">full case</button>
 
-            <div class="casestudy col span_4_of_12" style="top: 40px;">
+            <div class="casestudy">
+                <div class="study-content">
+                    <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
+                    <p>Case Study Description<br>
+                    Wow this is where the description would go and it would tell you all about the study without the graphic in the background. So good oh my goodness wow.</p>
+                    <button>full case</button>
+                </div>
+                <div class="study-visual">
+                    <img src="images/case_study_oval.svg">
+                </div>
+            </div>
+            <button class="mobile">full case</button>
+
+            <div class="casestudy">
                 <div class="study-content">
                     <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
                     <p>Case Study Description<br>
@@ -165,8 +168,8 @@
         </div>
             
         <!-- SECOND ROW OF CASE STUDIES -->
-        <div id="casestudysecondrow">
-            <div class="casestudy col span_4_of_12" style="top: 80px;">
+        <div id="casestudysecondrow" class="section group">
+            <div class="casestudy">
                 <div class="study-content">
                     <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
                     <p>Case Study Description<br>
@@ -179,7 +182,7 @@
             </div>
             <button class="mobile">full case</button>
 
-            <div class="casestudy col span_4_of_12" style="top: 80px;">
+            <div class="casestudy">
                 <div class="study-content">
                     <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
                     <p>Case Study Description<br>
@@ -192,7 +195,7 @@
             </div>
             <button class="mobile">full case</button>
 
-            <div class="casestudy col span_4_of_12" style="top: 80px; margin-bottom: 8em;">
+            <div class="casestudy">
                 <div class="study-content">
                     <p class="casestudytitle">Case Study<br><em>mobile app</em></p>
                     <p>Case Study Description<br>
@@ -203,8 +206,9 @@
                     <img src="images/case_study_oval.svg">
                 </div>
             </div>
-            <button class="mobile" style="margin-top: -4em;">full case</button>
+            <button class="mobile">full case</button>
         </div>
+        </section>
         
         <!-- PAGE BREAK -->
         <img src="images/page_break_graphic.png" alt=" ">
@@ -213,9 +217,11 @@
         -->
         <section class="polaroidright">
             <!-- <img src="images/scribble_lower_left.png" alt=" "> -->
-            <h3>Something about the kind of clients I want to work with?</h3>
-            <p>Is this you? / skills Description
-                Wow this is where the description would go and it would tell you about what kind of skills I have and how I am to work with. So good oh my goodness wow.</p>
+            <div>
+                <h3>Something about the kind of clients I want to work with?</h3>
+                <p>Is this you? / skills Description
+                    Wow this is where the description would go and it would tell you about what kind of skills I have and how I am to work with. So good oh my goodness wow.</p>
+            </div>
             <!-- <img src="images/scribble_lower_left.png" alt=" "> -->
             <img class="backpolaroid" src="images/polaroid_graphic.png" alt="polaroid graphic group of 2">
             <img class="frontpolaroid" src="images/polaroid_graphic.png" alt="polaroid graphic group of 2">
@@ -235,15 +241,14 @@
     <footer>
 
         <ul>
-            <li>home</li>
-            <li>work</li>
-            <li>about</li>
-            <li class="mobile">instagram</li>
+            <li><a href="#home">Back to Top</a></li>
+            <li><a href="#work">work</a></li>
+            <li class="mobile"><a href="https://www.instagram.com/hey.peas/" target="_blank">instagram</a></li>
         </ul>
 
         <p id="copy">&#169; Copyright Mara Elise Peasley 2023</p>
 
-        <p class="desktop">instagram</p>
+        <p class="desktop"><a href="https://www.instagram.com/hey.peas/" target="_blank">instagram</a></p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
